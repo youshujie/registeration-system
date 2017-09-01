@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报名系统</title>
+    <link rel="stylesheet" href="./css/manage.css">
+    <link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/data.css">
+    <link rel="stylesheet" href="./css/message.css">
+    <link rel="stylesheet" href="./css/account.css">
+    <link rel="stylesheet" href="./css/activity.css">
+    <link rel="stylesheet" href="./css/edit.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="nav tabs">
+            <ul>
+                <li><a href="#">数据管理</a>
+                    <ul>
+                        <li><a href="#">产品</a>
+                            <ul>
+                                <li><a href="#">第一轮面试</a></li>
+                                <li><a href="#">第二轮面试</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">视觉</a>
+                            <ul>
+                                <li><a href="#">第一轮面试</a></li>
+                                <li><a href="#">第二轮面试</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">WEB</a>
+                            <ul>
+                                <li><a href="#">第一轮面试</a></li>
+                                <li><a href="#">第二轮面试</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">移动</a>
+                            <ul>
+                                <li><a href="#">第一轮面试</a></li>
+                                <li><a href="#">第二轮面试</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">SRE</a>
+                            <ul>
+                                <li><a href="#">第一轮面试</a></li>
+                                <li><a href="#">第二轮面试</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="message tabs">短信模板</div>
+        <div class="account tabs">账户管理</div>
+        <div class="activity tabs">活动管理</div>
+    </div>
+    <div class="content">
+        <div class="data">
+            <div class="data-title-message">
+                <p class="data-title">
+                    <span class="type">产品</span>-<span class="order">第一次面试</span>
+                </p>
+                <p class="data-total">
+                    共有：<span class="number">77人</span>  
+                </p>
+                <button class="send b-btn">发信息</button>
+                <i class="iconfont icon-add1"></i>
+            </div>
+            <table>
+                <thead>
+                    <tr class="messages-title">
+                        <th class="check"><input type="checkbox" id="all"></th>
+                        <th class="name">姓名</th>
+                        <th class="department">部门</th>
+                        <th class="status">报名情况</th>
+                        <th class="phone">手机号</th>
+                        <th class="mod">修改信息</th>
+                        <th class="finish">完成</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="check"><input type="checkbox"></td>
+                        <td class="name">杜若</td>
+                        <td class="department">产品</td>
+                        <td class="status">已报名</td>
+                        <td class="phone">12345678901</td>
+                        <td class="mod mod-btn"><button class="r-btn">修改</button></td>
+                        <td class="finish fin-btn"><button class="b-btn">移动</button></td>
+                    </tr>
+                    <tr>
+                        <td class="check"><input type="checkbox"></td>
+                        <td class="name">杜若</td>
+                        <td class="department">产品</td>
+                        <td class="status">已报名</td>
+                        <td class="phone">12345678901</td>
+                        <td class="mod mod-btn"><button class="r-btn">修改</button></td>
+                        <td class="finish fin-btn"><button class="b-btn">移动</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="edit">
+            <div class="edit-main">
+                <h3 class="title">编辑数据</h3>
+                <form action="" method="post">
+                    <p>姓名：<input type="text" id="edit-user"></p>
+                    <p>部门：
+                        <select>
+                            <option value="">产品</option>
+                            <option value="">视觉</option>
+                            <option value="">WEB</option>
+                            <option value="">移动</option>
+                            <option value="">SRE</option>
+                        </select>
+                    </p>
+                    <p>手机号：<input type="text" id="edit-phone"></p>
+                    <button type="button" id="edit-finish">完成</button>
+                </form>
+            </div>
+            <div class="test-main">
+                <h3>请填写接受测试的手机号：</h3>
+                <div><input type="text" class="test-phone"></div>
+                <button type="button" id="start-test">开始测试</button>
+            </div>
+            <div class="add-acco-main">
+                <form action="" method="post">
+                    <p>用户名：<input type="text" id="edit-user"></p>
+                    <p>密码：<input type="text" id="edit-phone"></p>
+                    <p>权限：
+                        <select>
+                            <option value="">产品</option>
+                            <option value="">视觉</option>
+                        </select>
+                    </p>
+                    <button type="button" id="acco-finish">完成</button>
+                </form>
+            </div>
+            <div class="add-acti-main">
+               <form action="" method="post">
+                   <p>流程名称：<input type="text" id="process-name"></p>
+                   <p>选择模板：
+                       <select>
+                           <option value="">产品</option>
+                           <option value="">视觉</option>
+                       </select>
+                   </p>
+                   <button type="button" id="confirm-add-acti">确定添加</button>
+               </form> 
+            </div>
+        </div>
+        <div class="mess">
+            <div class="mess-title">
+                <span class="mess-name">模板名称</span>
+                <span class="">操作</span>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>产品第一次招新</td>
+                        <td><button class="r-btn">删除</button></td>
+                        <td class="test"><button class="b-btn">测试</button></td>
+                    </tr>
+                    <tr>
+                        <td>产品第二次招新</td>
+                        <td><button class="r-btn">删除</button></td>
+                        <td class="test"><button class="b-btn">测试</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="create g-btn">创建新模板</div>
+        </div>
+        <div class="template">
+            <select>
+                <option selected="selected" disabled="disabled"  style='display: none' value=''>请选择模板</option> 
+                <option>产品招新</option>
+                <option>视觉招新</option>
+                <option>WEB招新</option>
+                <option>移动招新</option>
+                <option>SRE招新</option>
+            </select>
+            <p>亲爱的()同学，恭喜你通过(),请于()来参加().</p>
+            <div class="add-var g-btn">添加变量</div>
+        </div>
+        <div class="acco">
+            <table>
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>密码</th>
+                        <th>权限</th>
+                        <th>功能</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>杜若</td>
+                        <td>329dfjkaghjklpoi</td>
+                        <td>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </td>
+                        <td><span class="r-btn">删除</span></td>
+                    </tr>
+                    <tr>
+                        <td>杜若</td>
+                        <td>adfjk</td>
+                        <td>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </td>
+                        <td><span class="r-btn">删除</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="add-acco">
+                <div class="b-btn">添加</div>
+            </div>
+        </div>
+        <div class="acti">
+            <div class="acti-fn">
+                <div class="search">
+                    <input type="text" placeholder="查找" class="search-acti">
+                    <i class="iconfont icon-search3"></i>
+                </div>
+                <div class="add-acti">
+                    <i class="iconfont icon-add1"></i>
+                </div>
+            </div>
+            <div class="acti-main">
+                <div class="activities">
+                    <div class="acti-title"><a>产品策划及运营部招新活动</a></div>
+                    <span class="s-btn acti-start">开始</span>
+                    <span class="r-btn acti-modi">修改</span>
+                    <span class="b-btn acti-dele">删除</span>
+                </div>
+                <div class="activities">
+                    <div class="acti-title"><a>视觉设计部招新活动</a></div>
+                    <span class="s-btn acti-start">开始</span>
+                    <span class="r-btn acti-modi">修改</span>
+                    <span class="b-btn acti-dele">删除</span>
+                </div>
+                <div class="activities">
+                    <div class="acti-title"><a>技术部门笔试招新活动</a></div>
+                    <span class="s-btn acti-start">开始</span>
+                    <span class="r-btn acti-modi">修改</span>
+                    <span class="b-btn acti-dele">删除</span>
+                </div>
+            </div>
+        </div>
+        <div class="acti-details">
+            <h2>产品策划及运营部招新活动</h2>
+            <h3>已有32人报名</h3>
+            <div class="interview">
+                <div class="fir-inter">1.第一次面试</div>
+                <span class="s-btn acti-start">开始</span>
+                <span class="r-btn acti-modi">修改</span>
+                <span class="b-btn acti-dele">删除</span>
+                <span class="add-acti"><i class="iconfont icon-add1"></i></span>
+            </div>
+            <div class="interview">
+                <div class="sec-inter">2.第二次面试</div>
+                <span class="s-btn acti-start">开始</span>
+                <span class="r-btn acti-modi">修改</span>
+                <span class="b-btn acti-dele">删除</span>
+                <span class="add-acti"><i class="iconfont icon-add1"></i></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
