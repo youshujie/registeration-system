@@ -38,6 +38,9 @@ select {
     background-color: #33a09a;
     text-align: center;
 }
+.sidebar .active {
+    background-color: #76cac5;    
+}
 .tabs {
     height: 40px;
     line-height: 40px;
@@ -112,7 +115,7 @@ select {
 .nav ul li:hover ul li:hover ul li a:hover { 
     background-color: #76cac5;
 }
-.content {
+.content-group {
     float: left;
     width: 80%;
 }

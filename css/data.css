@@ -27,7 +27,7 @@
 .iconfont {
     cursor: pointer;
 }
-table {
+.data > table {
     width: 100%;
 }
 thead {

@@ -14,9 +14,6 @@ $(document).ready(function() {
             pwd[0].focus();
         }
     }) 
-    // if ($.cookie('remUser') == 'true') {
-    //     console.log($.cookie('token'));  
-    // }  
 });
 
 $('#login').click(function() {
@@ -50,9 +47,11 @@ $('#login').click(function() {
             success: function(res) {
                 console.log(res.data.token);
                 //window.location.replace('./manage.html');
-                //Chrome doesn't support cookies for local files.
-                $.cookie('rmbUser', 'true', { expires: 14});
-                $.cookie('token', 'res.data.token', { expires: 14});
+                //Chrome doesn't support cookies for local files, 
+                //please try using the IP address of localhost instead. 
+                $.cookie('rmbUser', 'true', {expires: 14});
+                $.cookie('token', res.data.token, {expires: 14});
+                console.log($.cookie('token'));
             },
             error: function(err) {
                 if (err.status == 401) {
@@ -67,7 +66,7 @@ $('#login').click(function() {
 })
 
 function checkBlank(ele, str) {
-    if (!ele.val()) {
+    if (!ele.val() && str) {
         ele.next('span').text(str);
         ele.css('borderColor', '#ff5400');        
     } else {
@@ -87,3 +86,11 @@ function checkBlank(ele, str) {
     })
 
 }
+user.keydown(function() {
+    user.next('span').text('');
+    user.css('borderColor', '#fff');
+});
+pwd.keydown(function() {
+    pwd.next('span').text('');
+    pwd.css('borderColor', '#fff');
+});

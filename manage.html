@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="h-cmn">
 <head>
     <meta charset="UTF-8">
     <title>报名系统</title>
@@ -53,10 +53,59 @@
         </div>
         <div class="message tabs">短信模板</div>
         <div class="account tabs">账户管理</div>
-        <div class="activity tabs">活动管理</div>
+        <div class="acti-manage tabs">活动管理</div>
     </div>
-    <div class="content">
-        <div class="data">
+    <div class="edit content">
+        <div class="edit-main">
+            <h3 class="title">编辑数据</h3>
+            <form action="" method="post">
+                <p>姓名：<input type="text" id="edit-user"></p>
+                <p>部门：
+                    <select>
+                        <option value="">产品</option>
+                        <option value="">视觉</option>
+                        <option value="">WEB</option>
+                        <option value="">移动</option>
+                        <option value="">SRE</option>
+                    </select>
+                </p>
+                <p>手机号：<input type="text" id="edit-phone"></p>
+                <button type="button" id="edit-finish">完成</button>
+            </form>
+        </div>
+        <div class="test-main">
+            <h3>请填写接受测试的手机号：</h3>
+            <div><input type="text" class="test-phone"></div>
+            <button type="button" id="start-test">开始测试</button>
+        </div>
+        <div class="add-acco-main">
+            <form action="" method="post">
+                <p>用户名：<input type="text" id="edit-user"></p>
+                <p>密码：<input type="text" id="edit-phone"></p>
+                <p>权限：
+                    <select>
+                        <option value="">产品</option>
+                        <option value="">视觉</option>
+                    </select>
+                </p>
+                <button type="button" id="acco-finish">完成</button>
+            </form>
+        </div>
+        <div class="add-acti-main">
+           <form action="" method="post">
+               <p>流程名称：<input type="text" id="process-name"></p>
+               <p>选择模板：
+                   <select>
+                       <option value="">产品</option>
+                       <option value="">视觉</option>
+                   </select>
+               </p>
+               <button type="button" id="confirm-add-acti">确定添加</button>
+           </form> 
+        </div>
+    </div><!-- end edit -->
+    <div class="content-group">
+        <div class="data content">
             <div class="data-title-message">
                 <p class="data-title">
                     <span class="type">产品</span>-<span class="order">第一次面试</span>
@@ -100,57 +149,8 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <div class="edit">
-            <div class="edit-main">
-                <h3 class="title">编辑数据</h3>
-                <form action="" method="post">
-                    <p>姓名：<input type="text" id="edit-user"></p>
-                    <p>部门：
-                        <select>
-                            <option value="">产品</option>
-                            <option value="">视觉</option>
-                            <option value="">WEB</option>
-                            <option value="">移动</option>
-                            <option value="">SRE</option>
-                        </select>
-                    </p>
-                    <p>手机号：<input type="text" id="edit-phone"></p>
-                    <button type="button" id="edit-finish">完成</button>
-                </form>
-            </div>
-            <div class="test-main">
-                <h3>请填写接受测试的手机号：</h3>
-                <div><input type="text" class="test-phone"></div>
-                <button type="button" id="start-test">开始测试</button>
-            </div>
-            <div class="add-acco-main">
-                <form action="" method="post">
-                    <p>用户名：<input type="text" id="edit-user"></p>
-                    <p>密码：<input type="text" id="edit-phone"></p>
-                    <p>权限：
-                        <select>
-                            <option value="">产品</option>
-                            <option value="">视觉</option>
-                        </select>
-                    </p>
-                    <button type="button" id="acco-finish">完成</button>
-                </form>
-            </div>
-            <div class="add-acti-main">
-               <form action="" method="post">
-                   <p>流程名称：<input type="text" id="process-name"></p>
-                   <p>选择模板：
-                       <select>
-                           <option value="">产品</option>
-                           <option value="">视觉</option>
-                       </select>
-                   </p>
-                   <button type="button" id="confirm-add-acti">确定添加</button>
-               </form> 
-            </div>
-        </div>
-        <div class="mess">
+        </div><!-- end data -->
+        <div class="mess content">
             <div class="mess-title">
                 <span class="mess-name">模板名称</span>
                 <span class="">操作</span>
@@ -170,8 +170,8 @@
                 </tbody>
             </table>
             <div class="create g-btn">创建新模板</div>
-        </div>
-        <div class="template">
+        </div><!-- end mess -->
+        <div class="template content">
             <select>
                 <option selected="selected" disabled="disabled"  style='display: none' value=''>请选择模板</option> 
                 <option>产品招新</option>
@@ -182,8 +182,8 @@
             </select>
             <p>亲爱的()同学，恭喜你通过(),请于()来参加().</p>
             <div class="add-var g-btn">添加变量</div>
-        </div>
-        <div class="acco">
+        </div><!-- end template -->
+        <div class="acco content">
             <table>
                 <thead>
                     <tr>
@@ -221,8 +221,8 @@
             <div class="add-acco">
                 <div class="b-btn">添加</div>
             </div>
-        </div>
-        <div class="acti">
+        </div><!-- end acco -->
+        <div class="acti content">
             <div class="acti-fn">
                 <div class="search">
                     <input type="text" placeholder="查找" class="search-acti">
@@ -233,27 +233,15 @@
                 </div>
             </div>
             <div class="acti-main">
-                <div class="activities">
-                    <div class="acti-title"><a>产品策划及运营部招新活动</a></div>
-                    <span class="s-btn acti-start">开始</span>
-                    <span class="r-btn acti-modi">修改</span>
-                    <span class="b-btn acti-dele">删除</span>
-                </div>
-                <div class="activities">
-                    <div class="acti-title"><a>视觉设计部招新活动</a></div>
-                    <span class="s-btn acti-start">开始</span>
-                    <span class="r-btn acti-modi">修改</span>
-                    <span class="b-btn acti-dele">删除</span>
-                </div>
-                <div class="activities">
-                    <div class="acti-title"><a>技术部门笔试招新活动</a></div>
+                <div v-for="activity in activities" class="activities">
+                    <div class="acti-title"><a>{{activity.name}}</a></div>
                     <span class="s-btn acti-start">开始</span>
                     <span class="r-btn acti-modi">修改</span>
                     <span class="b-btn acti-dele">删除</span>
                 </div>
             </div>
-        </div>
-        <div class="acti-details">
+        </div><!-- end acco -->
+        <div class="acti-details content">
             <h2>产品策划及运营部招新活动</h2>
             <h3>已有32人报名</h3>
             <div class="interview">
@@ -270,7 +258,11 @@
                 <span class="b-btn acti-dele">删除</span>
                 <span class="add-acti"><i class="iconfont icon-add1"></i></span>
             </div>
-        </div>
+        </div><!-- end acti-details -->
     </div>
 </body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/manage.js"></script>
 </html>
