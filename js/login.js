@@ -1,6 +1,6 @@
 var user = $('#user');
 var pwd = $('#pwd');
-var loginUrl = 'http://hongyan.cqupt.edu.cn/activity/api/auth/';
+var loginUrl = 'http://hongyan.cqupt.edu.cn/activity/api/auth/login';
 var remUrl = 'http://hongyan.cqupt.edu.cn/activity/api/auth/checkremember';
 var cancelRemUrl = 'http://hongyan.cqupt.edu.cn/activity/api/auth/cancelremember';
 
@@ -30,15 +30,14 @@ $('#login').click(function() {
                 console.log(res);
             })
         } 
-        //else {
-        //     console.log(0);
-        //     var data = {
-        //         account: user,
-        //     };
-        //     $.get(cancelRemUrl, data, function(res) {
-        //         console.log(res);
-        //     })
-        // }
+        else {
+            var data = {
+                account: user.val(),
+            };
+            $.get(cancelRemUrl, data, function(res) {
+                console.log(res);
+            })
+        }
         $.ajax({
             type: 'post',
             async: true,
