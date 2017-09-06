@@ -9,6 +9,11 @@
     text-align: center;
     z-index: 10;
 }
+.icon-close {
+    margin: 10px 10px 0 0;
+    float: right;
+    font-size: 30px;
+}
 .edit-main,
 .test-main,
 .add-acco-main,

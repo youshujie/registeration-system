@@ -4,6 +4,9 @@ var url = 'http://hongyan.cqupt.edu.cn/activity/api/';
 $('.tabs').click(function() {
     $(this).addClass('active').siblings().removeClass('active');
 })
+$('.icon-close').click(function() {
+    $('.edit').css('display', 'none');
+})
 //activity manage
 $('.acti-manage').click(function() {
     $('.acti').css('display', 'block').siblings().css('display', 'none');
@@ -22,22 +25,27 @@ $('.acti-manage').click(function() {
         },
         success: function(res) {
             console.log(res.data.data);
-            var acti = new Vue({
-                el: '.acti',
-                data: {
-                    activities: [
-                        {name: res.data.data[0]}
-                    ]
-                }
-            })
+            var s = [{name: '1'},{name: '2'},{name: '3'}]
+
+            if (res.data.data[0]) {
+                var acti = new Vue({
+                    el: '.acti',
+                    data: {
+                        activities: s
+                    }
+                })
+            } else {
+
+            }
         },
-        // error: function(err) {
-        //     if (err.status == 401) {
-        //         user.next('span').text('未授权，请重新登录');
-        //         user.css('borderColor', '#ff5400');
-        //         pwd.next('span').text('未授权，请重新登录');
-        //         pwd.css('borderColor', '#ff5400');
-        //     }
-        // }
+        error: function(err) {
+            if (err.status == 400) {
+                //请求错误，请重新登录
+            }
+        }
     })
+})
+//add a activity
+$('.add-acti').click(function() {
+    $('.edit').css('display', 'block');
 })
