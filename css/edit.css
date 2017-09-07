@@ -1,5 +1,5 @@
 .edit {
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -30,6 +30,9 @@
     background-color: rgba(104, 103, 104, 0.5);
     color: #fff;
 }
+.add-acti-main {
+    height: 560px;
+}
 .edit-main {
     display: none;
 }
@@ -44,8 +47,8 @@
 .edit-main  p,
 .add-acco-main p,
 .add-acti-main p {
-    margin: 24px 0;
-    font-size: 18px;
+    margin: 20px 0;
+    font-size: 16px;
 }
 .edit-main input,
 .edit-main select,
@@ -53,9 +56,9 @@
 .add-acco-main input,
 .add-acco-main select,
 .add-acti-main input,
-.add-acti-main select {
+.add-acti-main textarea {
     padding: 0 8px;
-    width: 200px;
+    width: 214px;
     height: 34px;
     line-height: 34px;
     border: 1px solid #fff;
@@ -64,6 +67,10 @@
     font-size: 16px;
     color: #fff;
     outline: none;
+}
+.add-acti-main textarea {
+    line-height: 24px;
+    height: 70px;
 }
 #edit-finish,
 #start-test,

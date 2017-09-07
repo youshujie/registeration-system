@@ -40,7 +40,10 @@ $('.acti-manage').click(function() {
         },
         error: function(err) {
             if (err.status == 400) {
+                console.log(1);
+                alert('请求错误，请重新登录');
                 //请求错误，请重新登录
+                //window.location.replace('./login.html');
             }
         }
     })
@@ -49,3 +52,26 @@ $('.acti-manage').click(function() {
 $('.add-acti').click(function() {
     $('.edit').css('display', 'block');
 })
+$('#confirm-add-acti').click(function() {
+    console.log(1);
+    $.ajax({
+        type: 'post',
+        url: url + 'act',
+        data: {
+            token: $.cookie('token'),
+            activity_name: $('.acti-name').val(),
+            summary: $('.acti-summary').val(),
+            max_num: parseInt($('.max-num').val()), //人数限制，若修改的值低于已报名的人数会返回错误
+            location: $('.acti-location').val(),
+            start_time: '2017-09-17 00:00:00',
+            end_time: '2017-09-18 00:00:00',
+            time_description: $('.time-des').val()
+        },
+        success: function(res) {
+            console.log(res);
+        }
+    })
+})
+// function loginAgain() {
+//     alert('请求错误，请重新登录')
+// }

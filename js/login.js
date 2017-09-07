@@ -47,8 +47,8 @@ $('#login').click(function() {
             success: function(res) {
                 console.log(res.data.token);
                 //window.location.replace('./manage.html');
-                //Chrome doesn't support cookies for local files, 
-                //please try using the IP address of localhost instead. 
+                //Chrome doesn't support cookies for local files. 
+                //Please try using the IP address of localhost instead. 
                 $.cookie('rmbUser', 'true', {expires: 14});
                 $.cookie('token', res.data.token, {expires: 14});
                 console.log($.cookie('token'));

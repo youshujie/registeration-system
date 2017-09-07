@@ -27,7 +27,8 @@ button {
     outline: none;
 }
 input,
-select {
+select,
+textarea {
     outline: none;
 }
 .sidebar {
